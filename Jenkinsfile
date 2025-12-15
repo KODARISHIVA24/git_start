@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Read file') {
+        stage('Build Docker Image') {
             steps {
-                sh 'ls'
-                sh 'cat file1.txt'
+                sh 'docker build -t jenkins-docker-demo .'
             }
         }
     }
