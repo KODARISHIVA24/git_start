@@ -2,23 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+
+        stage('Info') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/KODARISHIVA24/git_start.git'
+                echo 'Jenkins pipeline started'
+                sh 'whoami'
+                sh 'pwd'
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Read File') {
             steps {
-                sh 'docker build -t shiva-demo-image .'
+                sh 'ls'
+                sh 'cat file1.txt'
             }
         }
 
-        stage('Test Image') {
-            steps {
-                sh 'docker images | grep shiva-demo-image'
-            }
-        }
     }
 }
