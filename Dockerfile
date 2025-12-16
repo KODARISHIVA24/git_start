@@ -1,2 +1,4 @@
 FROM alpine
-CMD echo "Hello from Docker built by Jenkins"
+WORKDIR /app
+COPY file1.txt /app/
+CMD cat /app/file1.txt
