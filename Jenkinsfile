@@ -2,21 +2,16 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Info') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Jenkins pipeline started'
-                sh 'whoami'
-                sh 'pwd'
+                sh 'docker build -t shiva-demo-image .'
             }
         }
 
-        stage('Read File') {
+        stage('Run Image') {
             steps {
-                sh 'ls'
-                sh 'cat file1.txt'
+                sh 'docker run shiva-demo-image'
             }
         }
-
     }
 }
