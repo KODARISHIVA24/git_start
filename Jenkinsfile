@@ -1,16 +1,9 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build Docker Image') {
+        stage('Checkout') {
             steps {
-                sh 'docker build -t shiva-demo-image .'
-            }
-        }
-
-        stage('Run Image') {
-            steps {
-                sh 'docker run shiva-demo-image'
+                git url: 'https://github.com/KODARISHIVA24/git_start.git', branch: 'main'
             }
         }
     }
