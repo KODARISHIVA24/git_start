@@ -1,3 +1,6 @@
 Hello GitHub
 git status
 im learning devops coaching in staragile
+# this line is adding in github to check
+i am very passionate to learn devops 
+devops is lengthy and intresting 
