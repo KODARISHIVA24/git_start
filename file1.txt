@@ -1,2 +1,3 @@
 Hello GitHub
-
+git status
+im learning devops coaching in staragile
