@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/KODARISHIVA24/git_start.git',
+                    url: 'https://github.com/KODARISHIVA2416/git_start.git',
                     credentialsId: 'github-token'
             }
         }
